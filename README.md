@@ -1,6 +1,10 @@
+## Start minkube
 ```
-minikube start
-kubectl apply -f argocd/argocd-ns.yaml
-kubectl apply -f argocd/argocd.yaml --namespace argocd
-kubectl apply -f argocd/appproj-cluster-project.yaml --namespace argocd
+minikube start --driver docker
+```
+
+## Install argocd
+```
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
