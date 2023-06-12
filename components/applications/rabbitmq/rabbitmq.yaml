@@ -5,6 +5,7 @@ metadata:
   name: rabbitmq
   namespace: argocd
 spec:
+  project: infrastructure
   destination:
     namespace: rabbitmq
     server: https://kubernetes.default.svc
