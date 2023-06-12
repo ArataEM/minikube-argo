@@ -2,13 +2,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: namespaces
+  name: infrastructure
   namespace: argocd
 spec:
   destination:
     server: https://kubernetes.default.svc
-  project: cluster-project
+  project: infrastructure
   source:
-    path: namespaces/
+    path: components/applications/
     repoURL: https://github.com/ArataEM/minikube-argo.git
     targetRevision: HEAD
