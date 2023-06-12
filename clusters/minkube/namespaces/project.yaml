@@ -3,18 +3,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   generation: 5
-  name: cluster-project
+  name: namespaces
 spec:
   clusterResourceWhitelist:
   - group: '*'
-    kind: '*'
+    kind: 'namespace'
   destinations:
   - name: in-cluster
     namespace: '*'
     server: https://kubernetes.default.svc
-  namespaceResourceWhitelist:
-  - group: '*'
-    kind: '*'
   orphanedResources:
     warn: true
   sourceRepos:
