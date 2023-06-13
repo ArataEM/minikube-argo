@@ -2,6 +2,7 @@
 project: infrastructure
 
 namespaces:
+  - argocd
   - rabbitmq
   - monitoring
 
