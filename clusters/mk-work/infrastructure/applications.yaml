@@ -9,6 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   project: infrastructure
   source:
-    path: components/applications/rabbitmq
+    path: infrastructure
     repoURL: https://github.com/artem-usenko-quarks-tech/minikube-argo.git
     targetRevision: HEAD

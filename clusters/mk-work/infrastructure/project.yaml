@@ -19,3 +19,4 @@ spec:
     warn: true
   sourceRepos:
   - https://github.com/artem-usenko-quarks-tech/minikube-argo.git
+  - https://charts.bitnami.com/bitnami 

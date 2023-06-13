@@ -1,22 +1,22 @@
----
-apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
-metadata:
-  name: infrastructure
-spec:
-  generators:
-  - list:
-      elements:
-      - application: rabbitmq
-  template:
-    metadata:
-      name: '{{application}}'
-      namespace: argocd
-    spec:
-      project: infrastructure
-      source:
-        repoURL: https://github.com/artem-usenko-quarks-tech/minikube-argo.git
-        targetRevision: HEAD
-        path: components/applications/{{application}}
-      destination:
-        server: https://kubernetes.default.svc
+# ---
+# apiVersion: argoproj.io/v1alpha1
+# kind: ApplicationSet
+# metadata:
+#   name: infrastructure
+# spec:
+#   generators:
+#   - list:
+#       elements:
+#       - application: rabbitmq
+#   template:
+#     metadata:
+#       name: '{{application}}'
+#       namespace: argocd
+#     spec:
+#       project: infrastructure
+#       source:
+#         repoURL: https://github.com/artem-usenko-quarks-tech/minikube-argo.git
+#         targetRevision: HEAD
+#         path: components/applications/{{application}}
+#       destination:
+#         server: https://kubernetes.default.svc
