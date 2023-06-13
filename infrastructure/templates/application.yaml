@@ -23,5 +23,5 @@ spec:
     chart: {{ $application.chart }}
     helm:
       valueFiles:
-        - {{ print $application.name "/values.yaml" }}
+        - {{ print "values.yaml" }}
 {{- end }}
