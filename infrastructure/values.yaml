@@ -1,4 +1,6 @@
 ---
+project: infrastructure
+
 namespaces: ['argocd', 'rabbitmq', 'monitoring', 'ingress-nginx']
 
 applications:
