@@ -2,8 +2,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  generation: 5
   name: infrastructure
+  namespace: argocd
 spec:
   clusterResourceWhitelist:
   - group: '*'

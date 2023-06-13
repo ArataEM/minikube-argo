@@ -11,7 +11,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ $application.namespace }}
-  project: {{ $application.project | $.Values.project | default "default" }}
+  project: {{ $application.project | .Values.project | default "default" }}
   syncPolicy:
     automated:
       prune: true
