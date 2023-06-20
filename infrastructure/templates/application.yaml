@@ -1,0 +1,27 @@
+{{- range $application := .Values.applications }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ $application.name }}
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: {{ $application.namespace }}
+  project: {{ $application.project | default "infrastructure" }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  source:
+    path: ''
+    repoURL: {{ $application.repoURL }}
+    targetRevision: {{ $application.targetRevision }}
+    chart: {{ $application.chart }}
+    helm:
+      valueFiles:
+        - {{ print "values.yaml" }}
+{{- end }}
