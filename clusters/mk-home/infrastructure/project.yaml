@@ -19,3 +19,5 @@ spec:
     warn: true
   sourceRepos:
   - https://github.com/ArataEM/minikube-argo
+  - https://charts.bitnami.com/bitnami
+  - https://open-policy-agent.github.io/gatekeeper/charts
