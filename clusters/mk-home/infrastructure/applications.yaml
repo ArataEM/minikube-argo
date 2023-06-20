@@ -9,6 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   project: infrastructure
   source:
-    path: components/applications/
+    path: infrastructure
     repoURL: https://github.com/ArataEM/minikube-argo.git
     targetRevision: HEAD
